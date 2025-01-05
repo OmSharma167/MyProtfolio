@@ -1,6 +1,3 @@
-
-
-
 import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import SearchBar from '../search/SearchBar';
@@ -27,7 +24,7 @@ export default function Navbar() {
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    document.documentElement.classList.toggle('dark');
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
     localStorage.setItem('theme', newTheme);
   };
 
@@ -75,7 +72,7 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <h1 className="text-2xl font-bold text-primary-800 dark:text-primary-200">Om Sharma</h1>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
