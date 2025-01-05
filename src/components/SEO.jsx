@@ -1,13 +1,16 @@
 import React from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const SEO = () => {
-  const siteUrl = 'https://omsharma.dev';
+  const siteUrl = 'https://protfolio-one-henna.vercel.app/';
   const name = 'Om Sharma';
-  const title = 'Om Sharma - Full Stack Developer & Software Engineer';
-  const description = 'Portfolio of Om Sharma - Software Engineer specializing in MERN Stack, Java, Python, and Data Structures & Algorithms. Currently pursuing B.Tech in Computer Science Engineering at NIET.';
+  const title = 'Om Sharma - Full Stack Developer & Software Engineer | Om_Sharma167 Portfolio';
+  const description = 'Portfolio of Om Sharma (Om_Sharma167) - Software Engineer specializing in MERN Stack, Java, Python, and Data Structures & Algorithms. Currently pursuing B.Tech in Computer Science Engineering at NIET.';
   const keywords = [
     'Om Sharma',
+    'Om_Sharma167',
+    'Om',
+    'Om167',
     'Full Stack Developer',
     'Software Engineer',
     'MERN Stack',
