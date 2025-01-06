@@ -48,14 +48,14 @@ export default function Hero() {
           >
             <a
               href="https://drive.google.com/uc?export=download&id=YOUR_RESUME_ID"
-              className="flex items-center px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors duration-300"
+              className="flex items-center px-6 py-3 backdrop-blur-sm rounded-lg overflow-hidden border border-primary-200 dark:border-primary-700 shadow-[0_4px_20px_rgba(14,165,233,0.15)]  bg-primary-600 text-white hover:bg-primary-700 transition-colors duration-300"
             >
               <FileDown className="w-5 h-5 mr-2" />
               Download Resume
             </a>
             <a
               href="/blog"
-              className="flex items-center px-6 py-3 bg-accent-700 text-white rounded-full hover:bg-accent-800 transition-colors duration-300"
+              className="flex items-center px-6 py-3 bg-accent-700 text-white backdrop-blur-sm rounded-lg overflow-hidden border border-primary-200 dark:border-primary-700 shadow-[0_4px_20px_rgba(14,165,233,0.15)]  hover:bg-accent-800 transition-colors duration-300"
             >
               <BookOpen className="w-5 h-5 mr-2" />
               Read My Blog
@@ -63,7 +63,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div 
-            className="flex justify-center space-x-6 mt-8"
+            className="flex justify-center space-x-6 mt-8 "
             variants={fadeIn}
           >
             {socialLinks.map((link, index) => (
@@ -76,7 +76,7 @@ export default function Hero() {
                 <SocialLink
                   href={link.href}
                   icon={link.icon}
-                  className="text-accent-600 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400 transition-colors duration-300"
+                  className="text-accent-600 hover:text-primary-600 backdrop-blur-sm rounded-lg overflow-hidden border border-primary-200 dark:border-primary-700 shadow-[0_4px_20px_rgba(14,165,233,0.15)]  dark:text-accent-300 dark:hover:text-primary-400 transition-colors duration-300"
                   aria-label={link.label}
                 />
               </motion.div>
