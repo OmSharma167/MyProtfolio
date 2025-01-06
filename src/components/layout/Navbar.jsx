@@ -1,11 +1,32 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import SearchBar from '../search/SearchBar';
 import SearchResults from '../search/SearchResults';
 import useSearch from '../../hooks/useSearch';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    // Check localStorage and system preference on mount
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(systemPrefersDark ? 'dark' : 'light');
+      document.documentElement.classList.toggle('dark', systemPrefersDark);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    localStorage.setItem('theme', newTheme);
+  };
 
   const searchableContent = [
     // Education
@@ -45,13 +66,13 @@ export default function Navbar() {
   const navItems = ['Education', 'Experience', 'Projects', 'Skills'];
 
   return (
-    <nav className="fixed top-0 w-full  dark:bg-accent-800/80 backdrop-blur-md z-50 shadow-sm">
+    <nav className="fixed top-0 w-full bg-white dark:bg-accent-800/80 backdrop-blur-md z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <h1 className="text-2xl font-bold text-primary-800 dark:text-primary-200">Om Sharma</h1>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
@@ -64,11 +85,31 @@ export default function Navbar() {
               </button>
             ))}
             <SearchBar onSearch={performSearch} />
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-accent-100 dark:hover:bg-accent-700 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? 
+                <Moon className="w-5 h-5 text-accent-600 dark:text-accent-300" /> : 
+                <Sun className="w-5 h-5 text-accent-600 dark:text-accent-300" />
+              }
+            </button>
           </div>
 
           {/* Mobile Navigation Button */}
           <div className="md:hidden flex items-center space-x-4">
             <SearchBar onSearch={performSearch} />
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-accent-100 dark:hover:bg-accent-700 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? 
+                <Moon className="w-5 h-5 text-accent-600 dark:text-accent-300" /> : 
+                <Sun className="w-5 h-5 text-accent-600 dark:text-accent-300" />
+              }
+            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-accent-600 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
