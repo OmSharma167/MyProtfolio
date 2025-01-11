@@ -7,10 +7,12 @@ import Experience from './components/sections/Experience';
 import Education from './components/sections/Education';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
-import Blog from './components/Blog';
-import BlogDetail from './components/Blog/BlogDetail';
+// import Blog from './services/Blog';
+// import BlogDetail from './services/Blog/BlogDetail';
 import Footer from './components/layout/Footer';
 import SEO from './components/SEO';
+import Blog from './components/sections/Blog';
+import BlogDetail from './components/sections/Blog/BlogDetail';
 // import BlogPostForm from './components/Blog/BlogPostForm';
 
 function App() {
