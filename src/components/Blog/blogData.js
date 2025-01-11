@@ -1,3 +1,6 @@
+
+
+
 export const blogPosts = [
   {
     title: "Building a Full-Stack Healthcare Platform",
@@ -10,7 +13,7 @@ export const blogPosts = [
       <ul>
         <li>Emergency SOS system with real-time location tracking</li>
         <li>Telemedicine platform for remote consultations</li>
-        <li>Integration with Google Maps API for location services</li>
+        <li>Integr ation with Google Maps API for location services</li>
         <li>Real-time chat using Socket.io</li>
         <li>ML-powered symptom checker</li>
       </ul>

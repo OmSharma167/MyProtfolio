@@ -6,18 +6,19 @@ import useSearch from '../../hooks/useSearch';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
-    // Check localStorage and system preference on mount
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
+    if (!savedTheme) {
+      // First time visitor - set dark mode
+      setTheme('dark');
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      // Returning visitor - use their preference
       setTheme(savedTheme);
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    } else {
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(systemPrefersDark ? 'dark' : 'light');
-      document.documentElement.classList.toggle('dark', systemPrefersDark);
     }
   }, []);
 
@@ -28,14 +29,13 @@ export default function Navbar() {
     localStorage.setItem('theme', newTheme);
   };
 
+  // Rest of the component code remains exactly the same
   const searchableContent = [
-    // Education
     {
       title: "B.Tech in Computer Science",
       description: "Galgotias University, Data Science Specialization",
       type: "education"
     },
-    // Projects
     {
       title: "Helix Emergency Healthcare",
       description: "Full-stack healthcare platform with emergency SOS and telemedicine features",
@@ -44,7 +44,6 @@ export default function Navbar() {
       githubUrl: "https://github.com/OmSharma167/helix-healthcare",
       liveUrl: "#"
     },
-    // Skills
     {
       title: "Technical Skills",
       description: "Core programming languages and technologies",

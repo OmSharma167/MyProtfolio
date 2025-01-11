@@ -11,7 +11,7 @@ import Blog from './components/Blog';
 import BlogDetail from './components/Blog/BlogDetail';
 import Footer from './components/layout/Footer';
 import SEO from './components/SEO';
-import BlogPostForm from './components/Blog/BlogPostForm';
+// import BlogPostForm from './components/Blog/BlogPostForm';
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
          
-          <Route path="/BlogPostForm" element={<BlogPostForm />} />
+          {/* <Route path="/BlogPostForm" element={<BlogPostForm />} /> */}
         </Routes>
         <Footer />
       </div>

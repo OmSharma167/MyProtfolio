@@ -47,7 +47,7 @@ export default function Hero() {
             variants={fadeIn}
           >
             <a
-              href="https://drive.google.com/uc?export=download&id=YOUR_RESUME_ID"
+              href="https://drive.google.com/file/d/1gJspg9ZXN5945pjNjv0MOmU-vtO8UBA_/view?usp=drive_link"
               className="flex items-center px-6 py-3 backdrop-blur-sm rounded-lg overflow-hidden border border-primary-200 dark:border-primary-700 shadow-[0_4px_20px_rgba(14,165,233,0.15)] hover:shadow-[0_4px_25px_rgba(14,165,233,0.25)] transition-all duration-300 bg-primary-600 text-white  hover:bg-primary-700"
             >
               <FileDown className="w-5 h-5 mr-2" />
