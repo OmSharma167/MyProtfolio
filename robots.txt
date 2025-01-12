@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://omsharma.dev/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 10
