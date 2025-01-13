@@ -1,4 +1,5 @@
-
+import nation from "./nation.jpg"
+import tcs from "./tcs.jpg"
 
 
 export const blogPosts = [
@@ -56,6 +57,56 @@ export const blogPosts = [
     additionalImages: [
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    title: "Tata Imagination Challenge 2024",
+    excerpt: "",
+    fullContent: `
+      
+      <h2>My Participation Experience</h2>
+      <p>I participated in the Tata Imagination Challenge 2024 and received a participation certificate. The experience was enriching, providing insights into structured problem-solving and the importance of presenting impactful ideas.</p>
+      <h2>imaginethat Idea </h2>
+      <p>
+      WHAT: Describe your idea and its necessity.
+      <br/>
+
+
+      HOW: Explain how it will drive change.
+      <br/>
+
+      WHO: Identify its impact and beneficiaries.
+      <br/>
+      </p>
+    `,
+    date: "jun 10 2024",
+    readTime: 1,
+    coverImage: tcs,
+    tags: ["", "", ""],
+    additionalImages: [
+      
+    ]
+  },
+  {
+    title: "NationBuilding Case Study Competition 2025",
+    excerpt: "The NationBuilding Case Study Competition 2025 is an event where participants analyze and propose innovative solutions to real-world challenges related to national development. ",
+    fullContent: `
+      <h2>Introduction to NationBuilding Case Study Competition 2025</h2>
+      <p>The NationBuilding Case Study Competition 2025 is an event where participants analyze and propose innovative solutions to real-world challenges related to national development. It typically involves:
+
+Case Study Analysis: Teams or individuals are provided with a detailed scenario focusing on issues like infrastructure, education, healthcare, or sustainability.
+Problem-Solving: Participants research, brainstorm, and devise actionable strategies or solutions.
+Presentation: Solutions are presented to a panel of judges, often including experts and industry leaders.
+Objective: Foster critical thinking, collaboration, and innovative ideas to address pressing national challenges.</p>
+
+     
+    `,
+    date: "jan 10, 2025",
+    readTime: 2,
+    coverImage: nation,
+    tags: ["", "", ""],
+    additionalImages: [
+      
     ]
   }
 ];
