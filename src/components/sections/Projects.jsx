@@ -57,25 +57,36 @@ import ProjectCard from '../ui/ProjectCard';
 const projects = [
   {
     title: "Helix Emergency Healthcare",
-    description: "Full-stack healthcare platform with emergency SOS and telemedicine features,Doctor ,User,Police,Ambulance,Hospital ",
-    technologies: ["MERN Stack", "Tailwind CSS", "Socket.io", "Google Maps API","Chatbot","ML","IP","ISP"],
+    description:
+      "Full-stack healthcare platform with emergency SOS and telemedicine features,Doctor ,User,Police,Ambulance,Hospital ",
+    technologies: [
+      "MERN Stack",
+      "Tailwind CSS",
+      "Socket.io",
+      "Google Maps API",
+      "Chatbot",
+      "ML",
+      "IP",
+      "ISP",
+    ],
     githubUrl: "https://github.com/OmSharma167/helix-healthcare",
-    liveUrl: "#"
+    liveUrl: "https://helixsos.vercel.app/",
   },
   {
     title: "E-commerce Web Application",
-    description: "Feature-rich e-commerce platform with admin dashboard and order management",
+    description:
+      "Feature-rich e-commerce platform with admin dashboard and order management",
     technologies: ["MERN Stack", "Tailwind CSS"],
     githubUrl: "https://github.com/OmSharma167/ecommerce",
-    liveUrl: "#"
+    liveUrl: "#",
   },
   {
     title: "Beauty and Wellness Web Application",
     description: "Booking platform for parlour, salon, and spa services",
     technologies: ["React", "Tailwind CSS"],
     githubUrl: "https://github.com/OmSharma167/beauty-wellness",
-    liveUrl: "#"
-  }
+    liveUrl: "#",
+  },
 ];
 
 export default function Projects() {

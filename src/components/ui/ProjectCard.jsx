@@ -50,14 +50,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Tag } from 'lucide-react';
-import { projectImages } from '@/assets/projects';
+import { projectImages } from './projects/index.js'; // 
+
+
 
 const ProjectCard = ({ project }) => {
   const imageKey = project.title
     .toLowerCase()
     .replace(/ /g, '-')
     .replace(/[^a-z0-9-]/g, '');
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
