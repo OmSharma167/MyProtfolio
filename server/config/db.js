@@ -1,14 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/blog_db', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
-    console.log('MongoDB connected successfully');
+    await mongoose.connect(
+      process.env.MONGODB_URI || "mongodb://localhost:27017/portfolio",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
+    console.log("✅ MongoDB Connected");
   } catch (error) {
-    console.error('MongoDB connection error:', error);
+    console.error("❌ MongoDB Connection Error:", error.message);
     process.exit(1);
   }
 };
