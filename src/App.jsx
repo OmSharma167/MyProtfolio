@@ -14,6 +14,7 @@ import Footer from './components/layout/Footer';
 import SEO from './components/SEO';
 import Blog from './components/sections/Blog';
 import BlogDetail from './components/sections/Blog/BlogDetail';
+import CertificateSection from './components/sections/CertificateSection';
 // import BlogPostForm from './components/Blog/BlogPostForm';
 
 function App() {
@@ -23,19 +24,23 @@ function App() {
       <div className="relative min-h-screen w-full bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-x-hidden">
         <Navbar />
         <Routes>
-          <Route path="/" element={
-            <main className="flex-grow">
-              <Hero />
-              <About />
-              <Education />
-              <Experience />
-              <Skills />
-              <Projects />
-            </main>
-          } />
+          <Route
+            path="/"
+            element={
+              <main className="flex-grow">
+                <Hero />
+                <About />
+                <Education />
+                <Experience />
+                <Skills />
+                <Projects />
+                <CertificateSection/>
+              </main>
+            }
+          />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
-         
+
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
