@@ -18,7 +18,10 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center pt-16 px-4 bg-gradient-to-b from-transparent to-white/5">
+    <section
+      id="about"
+      className="min-h-screen flex items-center justify-center pt-16 px-4 bg-gradient-to-b from-transparent to-white/5"
+    >
       <div className="max-w-7xl mx-auto text-center">
         <motion.div
           initial="initial"
@@ -26,7 +29,7 @@ export default function Hero() {
           variants={fadeIn}
           className="space-y-6"
         >
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-6xl font-bold text-primary-800 dark:text-primary-200"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -35,19 +38,20 @@ export default function Hero() {
             Om Sharma
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             className="text-lg md:text-xl text-accent-600 dark:text-accent-300 max-w-2xl mx-auto"
             variants={fadeIn}
           >
-            Software Engineer specializing in MERN Stack Development with expertise in Java, Python, and Data Structures & Algorithms
+            Software Engineer specializing in MERN Stack Development with
+            expertise in Java, Python, and Data Structures & Algorithms
           </motion.p>
 
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
             variants={fadeIn}
           >
             <a
-              href="https://drive.google.com/file/d/1gJspg9ZXN5945pjNjv0MOmU-vtO8UBA_/view?usp=drive_link"
+              href="https://drive.google.com/file/d/11PH6DXSC27GF5hYR8ORRV0VaEPWTtPow/view?usp=sharing"
               className="flex items-center px-6 py-3 backdrop-blur-sm rounded-lg overflow-hidden border border-primary-200 dark:border-primary-700 shadow-[0_4px_20px_rgba(14,165,233,0.15)] hover:shadow-[0_4px_25px_rgba(14,165,233,0.25)] transition-all duration-300 bg-primary-600 text-white  hover:bg-primary-700"
             >
               <FileDown className="w-5 h-5 mr-2" />
@@ -62,7 +66,7 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="flex justify-center space-x-6 mt-8"
             variants={fadeIn}
           >
