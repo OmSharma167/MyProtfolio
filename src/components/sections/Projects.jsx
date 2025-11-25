@@ -70,7 +70,7 @@ const projects = [
       "ISP",
     ],
     githubUrl: "https://github.com/OmSharma167/helix-healthcare",
-    liveUrl: "https://helixsos.vercel.app/",
+    liveUrl: "https://helix-sos.vercel.app/",
   },
   {
     title: "E-commerce Web Application",
